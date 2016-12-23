@@ -63,11 +63,23 @@ let a: string | null | void
 ### TypeScript
 
 ```ts
-let a: string?
+let a: string | undefined
+
+// or:
+
+let a: string | null
 
 // or:
 
 let a: string | null | undefined
+```
+
+Optional parameters implicitly add `undefined`:
+
+```ts
+function f(x?: number) { }
+// same as:
+function f(x?: number | undefined) { }
 ```
 
 ## type casting
@@ -276,7 +288,7 @@ type A = {
   thing: string
 }
 
-type lookedUpThing = typeof A['thing']
+type lookedUpThing = A['thing']
 ```
 
 ## Mapped Types / Foreach Property
