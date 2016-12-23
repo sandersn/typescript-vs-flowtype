@@ -48,14 +48,14 @@ function fooGood<T extends { x: number }>(obj: T): T {
 
 https://flowtype.org/blog/2015/03/12/Bounded-Polymorphism.html
 
-## nullable type
+## maybe & nullable type
 
 ### Flow
 
 ```js
 let a: ?string
 
-// or:
+// equvalent to:
 
 let a: string | null | void
 ```
@@ -63,14 +63,6 @@ let a: string | null | void
 ### TypeScript
 
 ```ts
-let a: string | undefined
-
-// or:
-
-let a: string | null
-
-// or:
-
 let a: string | null | undefined
 ```
 
