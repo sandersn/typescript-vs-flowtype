@@ -153,7 +153,7 @@ TypeScript is more strict here, in that if you want to use a property which is n
 
 ```js
 type ExactUser = { name: string, age: number };
-type User = { name: string, age: number, [otherProperty: any] };
+type User = { name: string, age: number, [otherProperty: string]: any };
 type OptionalUser = Partial<{ name: string, age: number }>; // all properties become optional
 ```
 
